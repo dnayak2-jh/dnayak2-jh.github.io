@@ -114,21 +114,31 @@ third_party_libraries:
   download: false
   katex:
     enabled: true
+    url: {}
   mermaid:
     enabled: false
+    url: {}
   chartjs:
     enabled: false
+    url: {}
   echarts:
     enabled: false
+    url: {}
   vega_lite:
     enabled: false
+    url: {}
   tikzjax:
     enabled: false
+    url: {}
   typograms:
     enabled: false
+    url: {}
   diff2html:
     enabled: false
+    url: {}
   leaflet:
     enabled: false
+    url: {}
   mathjax:
     enabled: false
+    url: {}
