@@ -106,3 +106,29 @@ scholar:
   query: "@*"
   group_by: year
   group_order: descending
+
+# -----------------------------------------------------------------------------
+# Third Party Libraries
+# -----------------------------------------------------------------------------
+third_party_libraries:
+  download: false
+  katex:
+    enabled: true
+  mermaid:
+    enabled: false
+  chartjs:
+    enabled: false
+  echarts:
+    enabled: false
+  vega_lite:
+    enabled: false
+  tikzjax:
+    enabled: false
+  typograms:
+    enabled: false
+  diff2html:
+    enabled: false
+  leaflet:
+    enabled: false
+  mathjax:
+    enabled: false
