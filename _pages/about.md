@@ -14,7 +14,7 @@ profile:
     <p>Baltimore, MD 21218</p>
 
 news: true
-selected_papers: true
+selected_papers: false
 social: true
 ---
 
