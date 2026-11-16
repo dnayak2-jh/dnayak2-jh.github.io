@@ -1,0 +1,13 @@
+# Degrees, newest first.
+
+- when: 2025 to present
+  school: Johns Hopkins University
+  text: "Ph.D., Scientific Machine Learning. Advisor: Prof. Somdatta Goswami"
+
+- when: 2021 to 2024
+  school: Indian Institute of Science, Bengaluru
+  text: "M.Tech. (Research), Computational and Data Sciences. Advisor: Prof. Konduri Aditya"
+
+- when: 2015 to 2019
+  school: National Institute of Technology, Tiruchirappalli
+  text: "B.Tech. (Honors), Mechanical Engineering"

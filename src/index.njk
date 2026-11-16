@@ -1,0 +1,222 @@
+---
+permalink: /index.html
+---
+<!doctype html>
+<html lang="en" data-palette="{{ site.palette }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.name }}</title>
+<meta name="description" content="{{ site.description }}">
+<meta name="author" content="{{ site.name }}">
+<link rel="canonical" href="{{ site.url }}/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ site.name }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:url" content="{{ site.url }}/">
+<meta property="og:image" content="{{ site.url }}{{ site.portrait }}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2310151C'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='15' font-weight='700' text-anchor='middle' fill='white'%3EDN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":{{ site.name | dump | safe }},"url":"{{ site.url }}/","image":"{{ site.url }}{{ site.portrait }}","jobTitle":"Ph.D. Candidate","affiliation":{"@type":"CollegeOrUniversity","name":"Johns Hopkins University"},"sameAs":[{% for l in site.links %}{{ l.url | dump | safe }}{% if not loop.last %},{% endif %}{% endfor %}]}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top">{{ site.name }}</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#talks">Talks and teaching</a>
+      <a class="nav-cv" href="{{ site.cv }}">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section id="top" class="wrap hero">
+  <div class="hero-text">
+    <div class="eyebrow">{{ site.role }}</div>
+    <h1>{{ site.headline }}</h1>
+    <p class="lead">{{ site.bio | safe }}</p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="mailto:{{ site.email }}">Email me</a>
+      {%- for l in site.links %}
+      <a class="btn" href="{{ l.url }}">{{ l.label }}</a>
+      {%- endfor %}
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="{{ site.portrait }}" alt="Portrait of {{ site.name }}" width="720" height="864">
+    <div class="mono small">{{ site.address }}</div>
+  </div>
+</section>
+
+<section class="band" aria-label="Long-horizon prediction schematic">
+  <div class="wrap band-row">
+    <div class="band-text">
+      <div class="eyebrow">{{ site.problem.label }}</div>
+      <p>{{ site.problem.text }}</p>
+      <div class="small muted">Schematic, not data.</div>
+    </div>
+    <svg class="schematic" viewBox="0 0 640 220" role="img" aria-label="Schematic: an autoregressive rollout drifts away from the reference solution after the training window, while a time-integrated rollout keeps tracking it.">
+      <rect class="s-window" x="40" y="16" width="230" height="168"></rect>
+      <line class="s-axis" x1="40" y1="184" x2="620" y2="184"></line>
+      <line class="s-axis" x1="40" y1="16" x2="40" y2="184"></line>
+      <line class="s-split" x1="270" y1="16" x2="270" y2="184"></line>
+      <text class="s-mono" x="52" y="34">training window</text>
+      <text class="s-mono" x="282" y="34">extrapolation</text>
+      <text class="s-mono" x="606" y="204">t</text>
+      <path class="s-ref" d="M40 120 C 90 60, 130 60, 180 110 S 270 170, 320 120 S 410 60, 460 110 S 550 165, 620 118"></path>
+      <path class="s-drift" d="M40 120 C 90 60, 130 60, 180 110 S 268 168, 318 124 S 400 86, 450 80 S 540 52, 620 30"></path>
+      <g class="s-steps">
+        <circle cx="40" cy="120" r="4"></circle><circle cx="98" cy="76" r="4"></circle><circle cx="156" cy="89" r="4"></circle><circle cx="214" cy="138" r="4"></circle><circle cx="272" cy="151" r="4"></circle><circle cx="330" cy="110" r="4"></circle><circle cx="388" cy="78" r="4"></circle><circle cx="446" cy="97" r="4"></circle><circle cx="504" cy="143" r="4"></circle><circle cx="562" cy="147" r="4"></circle><circle cx="620" cy="118" r="4"></circle>
+      </g>
+      <text class="s-label s-label-drift" x="500" y="26">autoregressive rollout</text>
+      <text class="s-label s-label-steps" x="432" y="172">time-integrated steps</text>
+      <text class="s-label s-label-ref" x="96" y="172">reference solution</text>
+    </svg>
+  </div>
+</section>
+
+<section id="research" class="wrap section">
+  <div class="section-head">
+    <div class="eyebrow">Research</div>
+    <h2>Selected work</h2>
+  </div>
+  <div class="cards">
+    {%- for r in research %}
+    <article class="card">
+      {%- if r.image %}
+      <a class="figure" href="{{ r.image }}" aria-label="Open figure: {{ r.image_alt }}"><img src="{{ r.image }}" alt="{{ r.image_alt }}" loading="lazy"></a>
+      {%- endif %}
+      <div class="mono small">{{ r.venue }}</div>
+      <h3>{{ r.title }}</h3>
+      <p>{{ r.summary }}</p>
+      {%- if r.url %}
+      <a class="more" href="{{ r.url }}">{{ r.link_label or "Read more" }}</a>
+      {%- endif %}
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section id="publications" class="wrap section">
+  <div class="section-head split">
+    <div>
+      <div class="eyebrow">Publications</div>
+      <h2>Papers</h2>
+    </div>
+    <a class="more" href="{{ site.links[0].url }}">Full list on {{ site.links[0].label }}</a>
+  </div>
+  <ol class="pubs">
+    {%- for p in publications %}
+    <li>
+      <div class="pub-year mono">{{ p.year }}</div>
+      <div class="pub-body">
+        {%- if p.url %}
+        <a class="pub-title" href="{{ p.url }}">{{ p.title }}</a>
+        {%- else %}
+        <div class="pub-title">{{ p.title }}</div>
+        {%- endif %}
+        <div class="pub-authors">{{ p.authors | highlightAuthor(site.short_name) | safe }}</div>
+        <div class="pub-venue"><em>{{ p.venue }}</em>{% if p.detail %} {{ p.detail }}{% endif %}</div>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section id="experience" class="wrap section two-col">
+  <div class="col-wide">
+    <div class="section-head">
+      <div class="eyebrow">Experience</div>
+      <h2>Industry</h2>
+    </div>
+    <div class="entries">
+      {%- for e in experience %}
+      <div class="entry">
+        <div class="mono small">{{ e.when }}</div>
+        <h3>{{ e.title }}</h3>
+        <p>{{ e.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+  <div class="col-narrow">
+    <div class="section-head">
+      <div class="eyebrow">Education</div>
+      <h2>Degrees</h2>
+    </div>
+    <div class="entries">
+      {%- for e in education %}
+      <div class="entry">
+        <div class="mono small">{{ e.when }}</div>
+        <h3 class="h-small">{{ e.school }}</h3>
+        <p class="small-text">{{ e.text }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="talks" class="wrap section three-col">
+  <div class="list-col">
+    <h2 class="list-head">Selected talks</h2>
+    <ul class="plain">
+      {%- for t in talks %}
+      <li><div class="item-title">{{ t.title }}</div><div class="muted">{{ t.text }}</div></li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <div class="list-col">
+    <h2 class="list-head">Teaching</h2>
+    <ul class="plain">
+      {%- for t in teaching %}
+      <li><div class="item-title">{{ t.title }}</div><div class="muted">{{ t.text }}</div></li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <div class="list-col">
+    <h2 class="list-head">Honors</h2>
+    <ul class="plain">
+      {%- for t in honors %}
+      <li><div class="item-title">{{ t.title }}</div><div class="muted">{{ t.text }}</div></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="contact-row">
+      <div class="contact-text">
+        <h2>{{ site.contact.heading }}</h2>
+        <p>{{ site.contact.text }}</p>
+      </div>
+      <a class="btn btn-invert" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+    <div class="footer-row">
+      <div>&copy; <span id="year"></span> {{ site.name }}</div>
+      <div class="footer-links">
+        {%- for l in site.links %}
+        <a href="{{ l.url }}">{{ l.label }}</a>
+        {%- endfor %}
+        <a href="{{ site.cv }}">CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

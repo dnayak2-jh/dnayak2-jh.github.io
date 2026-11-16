@@ -1,0 +1,21 @@
+# Industry experience, newest first.
+
+- when: May 2026 to Aug 2026, Niskayuna, NY
+  title: GE Aerospace Research, Probabilistic Design Fellow Intern
+  text: >
+    Built a POD-based deep learning warm start for steady-state CFD of high-pressure
+    turbine blades, reaching 2 to 3x faster convergence from only 10 to 20 training
+    samples, and geometric deep learning surrogates for additive manufacturing.
+
+- when: Jan 2024 to Sep 2024, Bengaluru
+  title: HARMAN International, Research Intern
+  text: >
+    Worked in the Harman X research division on predictive models of mental state and
+    vital signs for driver monitoring, including distributed training, mixed precision,
+    and a 2.5x faster video processing pipeline.
+
+- when: Jul 2019 to Jul 2021, Pune
+  title: Bajaj Auto, Assistant Manager (Engineering)
+  text: >
+    Developed gear manufacturing processes for KTM and Pulsar models, including internal
+    gear teeth rolling and a low-cost automatic deburring unit.

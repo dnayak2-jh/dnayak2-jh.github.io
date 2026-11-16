@@ -1,0 +1,45 @@
+# Site-wide settings. Edit values here; the page picks them up on the next push.
+
+# Color palette: blue, forest, burgundy or dark (defined at the top of assets/css/site.css)
+palette: forest
+
+url: https://dnayak2-jh.github.io
+name: Dibyajyoti Nayak
+short_name: D. Nayak          # how your name appears in author lists (shown in bold)
+role: Ph.D. candidate, Johns Hopkins University
+description: Ph.D. candidate at Johns Hopkins University working on Scientific Machine Learning and AI for Science.
+
+headline: Neural surrogates that stay accurate long after the training window ends.
+bio: >
+  I work on scientific machine learning for time-dependent PDEs: scalable, reliable,
+  mesh-invariant surrogates that couple neural operators and graph networks with
+  numerical time integration. I am advised by
+  <a href="https://engineering.jhu.edu/faculty/somdatta-goswami/">Prof. Somdatta Goswami</a>
+  in Civil and Systems Engineering.
+
+portrait: /assets/img/portrait.jpg
+address: Latrobe Hall, Johns Hopkins University, Baltimore, MD 21218
+email: dnayak2@jh.edu
+cv: /assets/pdf/Dibya_CV.pdf
+
+links:
+  - label: Google Scholar
+    url: https://scholar.google.com/citations?user=iAdGHHQAAAAJ&hl=en
+  - label: GitHub
+    url: https://github.com/dnayak2-jh
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/dibyajyoti-nayak-889b03138/
+
+problem:
+  label: The problem I keep returning to
+  text: >
+    Autoregressive surrogates accumulate error at every step and drift once they leave
+    the training window. Learning the time derivative and marching it with a numerical
+    integrator keeps the rollout on the true trajectory.
+
+contact:
+  heading: Let's talk scientific ML.
+  text: >
+    Feel free to email me about scientific machine learning, computational physics, or
+    related topics. Off the clock you will find me playing soccer, badminton, or chess,
+    at the gym, or cooking.

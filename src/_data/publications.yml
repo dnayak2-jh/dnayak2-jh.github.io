@@ -1,0 +1,49 @@
+# Publications, newest first. To add one, copy a block to the top and edit it.
+# url is optional. Your own name is bolded automatically (see short_name in site.yml).
+
+- year: 2026
+  title: "TI-DeepONet: Learnable time integration for stable long-term extrapolation"
+  authors: D. Nayak, S. Goswami
+  venue: Computer Methods in Applied Mechanics and Engineering
+  detail: 456, 118960
+  url: https://doi.org/10.1016/j.cma.2026.118960
+
+- year: 2026
+  title: "Physics-informed time-integrated DeepONet: Temporal tangent space operator learning for high-accuracy inference"
+  authors: L. Mandl, D. Nayak, T. Ricken, S. Goswami
+  venue: Computer Methods in Applied Mechanics and Engineering
+  detail: 455, 118917
+  url: https://doi.org/10.1016/j.cma.2026.118917
+
+- year: 2026
+  title: "Data-efficient time-dependent PDE surrogates: Graph neural simulators vs. neural operators"
+  authors: D. Nayak, S. Goswami
+  venue: Results in Engineering
+  detail: "113554"
+  url: https://www.sciencedirect.com/science/article/pii/S2590123026045640
+
+- year: 2025
+  title: "ANCHOR: Error-controlled adaptive numerical correction for neural operator time marching"
+  authors: R. Roy, D. Nayak, S. Goswami
+  venue: arXiv preprint
+  detail: arXiv:2512.19643
+  url: https://arxiv.org/abs/2512.19643
+
+- year: 2024
+  title: "Data-driven identification of precursors of flashback in a lean hydrogen reheat combustor"
+  authors: M. Floris, T. Shiva Sai, D. Nayak, I. Langella, K. Aditya, N. A. K. Doan
+  venue: Proceedings of the Combustion Institute
+  detail: 40, 105524
+  url: https://doi.org/10.1016/j.proci.2024.105524
+
+- year: 2024
+  title: "A co-kurtosis PCA based dimensionality reduction with nonlinear reconstruction using neural networks"
+  authors: D. Nayak, A. Jonnalagadda, U. Balakrishnan, H. Kolla, K. Aditya
+  venue: Combustion and Flame
+  detail: 259, 113192
+  url: https://doi.org/10.1016/j.combustflame.2023.113192
+
+- year: 2023
+  title: "A co-kurtosis PCA based dimensionality reduction with neural network reconstruction for chemical kinetics in reacting flows"
+  authors: K. Aditya, D. Nayak, A. Jonnalagadda, U. Balakrishnan, H. Kolla
+  venue: Bulletin of the American Physical Society

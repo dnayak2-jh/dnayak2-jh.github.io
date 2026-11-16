@@ -1,0 +1,48 @@
+# Selected work cards, shown in this order. To add one, copy a block and edit it.
+# image is optional; put the file in src/assets/img/research/.
+
+- title: "TI-DeepONet: learnable time integration for stable long-term extrapolation"
+  venue: CMAME, 2026
+  image: /assets/img/research/ti-deeponet.png
+  image_alt: "TI-DeepONet architecture: a DeepONet predicts the time derivative, which a numerical time integrator advances"
+  summary: >
+    Embeds a neural operator inside adaptive numerical time stepping, preserving the
+    Markovian structure of the dynamics. Across six PDE systems, relative L2 extrapolation
+    error drops by about 96.3% against autoregressive rollouts and 83.6% against
+    fixed-horizon training.
+  link_label: Read the paper
+  url: https://doi.org/10.1016/j.cma.2026.118960
+
+- title: "PITI-DeepONet: temporal tangent space operator learning"
+  venue: CMAME, 2026
+  image: /assets/img/research/piti-deeponet.png
+  image_alt: "PITI-DeepONet framework: dual-output DeepONet with physics-informed training losses and RK4 inference"
+  summary: >
+    A dual-output DeepONet learns the temporal derivative operator from physics alone or
+    from physics plus data. On four PDE systems it cuts forecasting error by over 79%
+    against full rollout and 84% against autoregressive baselines, with limited or no
+    labeled data.
+  link_label: Read the paper
+  url: https://doi.org/10.1016/j.cma.2026.118917
+
+- title: "Data-efficient PDE surrogates: graph neural simulators vs. neural operators"
+  venue: Results in Engineering, 2026
+  image: /assets/img/research/gns.png
+  image_alt: "Comparison of how GNN, CNN and FNN architectures represent a field on an unstructured mesh"
+  summary: >
+    Couples a graph neural simulator with explicit time stepping and reaches under 1% test
+    error from only 3% of the training data. Over five PDE systems, forecasting error falls
+    by over 82% against FNO and 99% against DeepONet autoregressive baselines.
+  link_label: Read the paper
+  url: https://www.sciencedirect.com/science/article/pii/S2590123026045640
+
+- title: "ANCHOR: error-controlled numerical correction for neural operator time marching"
+  venue: arXiv preprint, 2025
+  image: /assets/img/research/anchor.png
+  image_alt: "ANCHOR schematic: an error estimator decides between accepting the neural operator output and falling back to a numerical solver"
+  summary: >
+    A physics-informed residual monitor decides when a neural surrogate hands a step to a
+    high-fidelity solver. Error growth stays bounded under 5 to 10% over long horizons, at
+    up to 10x lower inference cost than the solver alone, on six PDE benchmarks.
+  link_label: Read the preprint
+  url: https://arxiv.org/abs/2512.19643
