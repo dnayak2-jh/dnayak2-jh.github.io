@@ -1,7 +1,7 @@
 # Site-wide settings. Edit values here; the page picks them up on the next push.
 
 # Color palette: blue, forest, burgundy or dark (defined at the top of assets/css/site.css)
-palette: blue
+palette: forest
 
 url: https://dnayak2-jh.github.io
 name: Dibyajyoti Nayak
